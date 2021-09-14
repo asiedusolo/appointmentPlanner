@@ -12,11 +12,11 @@ function App() {
   */
   const [contacts, setContacts] = useState([
     {name: 'Solomon Asiedu',
-     phoneNumber: '0548343443',
+     phone: '0548343443',
      email: 'solo@gmail.com'
     },
     {name: 'Atobra Joseph',
-     phoneNumber: '0453837343',
+     phone: '0453837343',
      email: 'atobra@gmail.com'
     }
   ])

@@ -26,7 +26,9 @@ export const ContactsPage = (props) => {
      phone: phone,
      email: email
    }
-   if(isDuplicate !== true){
+  //  addContact(newContact)
+  //  alert(JSON.stringify(newContact, null, ''))
+   if(!isDuplicate){
      addContact(newContact)
      alert(JSON.stringify(newContact, '', 2))
      setName('')
@@ -41,13 +43,19 @@ export const ContactsPage = (props) => {
   contacts array variable in props
   */
   useEffect(() => {
-    const value = contacts.find((contact) => {
-      return contact.name === name
-    })
-    if(!value){
-      setIsDuplicate(true)
+    if(name){
+      const value = contacts.find((contact) => {
+        return contact.name === name
+      })
+      console.log("Valueeeee: ", value)
+      if(value){
+        setIsDuplicate((prev) => !prev)
+      }else{
+        setIsDuplicate(false)
+      }
+      console.log(isDuplicate)
     }
-  }, [name])
+  }, [name, contacts])
 
   return (
     <div>

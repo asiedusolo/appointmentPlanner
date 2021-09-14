@@ -10,10 +10,10 @@ export const ContactForm = ({
   handleSubmit
 }) => {
   return (
-    <form onSubmit={() => handleSubmit}>
+    <form onSubmit={handleSubmit}>
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Full name" />
-        <input type="text" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Phone number" />
-        <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
+        <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Phone number" />
+        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
         <input type="Submit" />
     </form>
   );
