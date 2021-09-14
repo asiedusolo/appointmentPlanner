@@ -23,12 +23,12 @@ function App() {
   const [appointments, setAppointments] = useState([
     {title: 'Training progress',
      contact: 'first contact',
-     date: new Date(),
+     date: '2nd Feb, 2019',
      time: '2:30pm'
     },
     {title: 'Codesignal progress',
      contact: 'second contact',
-     date: new Date(),
+     date: '5th March, 2021',
      time: '5:30pm'
     }
   ])
@@ -50,13 +50,8 @@ function App() {
     })
   }
 
-  const addAppointment = (title, contact, date, time) => {
-    const newAppointment = {
-      title: title,
-      contact: contact,
-      date: date,
-      time: time
-    }
+  const addAppointment = (newAppointment) => {
+    
     setAppointments((prev) => {
       return [...prev, newAppointment]
     })

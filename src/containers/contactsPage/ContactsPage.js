@@ -34,6 +34,9 @@ export const ContactsPage = (props) => {
      setName('')
      setPhone('')
      setEmail('')
+   }else{
+     alert('The contact name already exists')
+     
    }
 
   };
