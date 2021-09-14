@@ -10,8 +10,28 @@ function App() {
   Define state variables for 
   contacts and appointments 
   */
-  const [contacts, setContacts] = useState([])
-  const [appointments, setAppointments] = useState([])
+  const [contacts, setContacts] = useState([
+    {name: 'Solomon Asiedu',
+     phoneNumber: '0548343443',
+     email: 'solo@gmail.com'
+    },
+    {name: 'Atobra Joseph',
+     phoneNumber: '0453837343',
+     email: 'atobra@gmail.com'
+    }
+  ])
+  const [appointments, setAppointments] = useState([
+    {title: 'Training progress',
+     contact: 'first contact',
+     date: new Date(),
+     time: '2:30pm'
+    },
+    {title: 'Codesignal progress',
+     contact: 'second contact',
+     date: new Date(),
+     time: '5:30pm'
+    }
+  ])
 
   const ROUTES = {
     CONTACTS: "/contacts",
@@ -23,12 +43,8 @@ function App() {
   contacts and appointments
   */
 
-  const addContact = (name, phoneNumber, email) => {
-    const newContact = {
-      name: name,
-      phoneNumber: phoneNumber,
-      email: email
-    }
+  const addContact = (newContact) => {
+    
     setContacts((prev) => {
       return [...prev, newContact]
     })
