@@ -58,7 +58,7 @@ export const ContactsPage = (props) => {
       }
       console.log(isDuplicate)
     }
-  }, [name, contacts])
+  }, [name, contacts, isDuplicate])
 
   return (
     <div>
