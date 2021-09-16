@@ -30,7 +30,7 @@ export const ContactsPage = (props) => {
   //  alert(JSON.stringify(newContact, null, ''))
    if(!isDuplicate){
      addContact(newContact)
-     alert(JSON.stringify(newContact, '', 2))
+    //  alert(JSON.stringify(newContact, '', 2))
      setName('')
      setPhone('')
      setEmail('')
